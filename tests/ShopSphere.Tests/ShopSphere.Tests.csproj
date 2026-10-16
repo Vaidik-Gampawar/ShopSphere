@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.1" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.13" />
+    <ProjectReference
+      Include="../../src/ProductService/ProductService.csproj"
+      Aliases="global,product"
+    />
+    <ProjectReference
+      Include="../../src/IdentityService/IdentityService.csproj"
+      Aliases="global,identity"
+    />
+    <ProjectReference Include="../../src/OrderService/OrderService.csproj" Aliases="global,order" />
+    <ProjectReference
+      Include="../../src/NotificationService/NotificationService.csproj"
+      Aliases="global,notification"
+    />
+    <ProjectReference
+      Include="../../src/ShopSphere.Web/ShopSphere.Web.csproj"
+      Aliases="global,web"
+    />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+</Project>

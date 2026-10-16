@@ -1,0 +1,2 @@
+@model List<NotificationDto>
+@{ViewData["Title"]="Notifications";}<div class="eyebrow">IN THE LOOP</div><h1 class="mt-2 mb-4">Your notifications.</h1>@if(Model.Count==0){<div class="panel">No notifications yet.</div>}@foreach(var n in Model){<article class="panel mb-3"><small class="text-secondary">@n.CreatedUtc.ToString("dd MMM yyyy, HH:mm") UTC · Local confirmation</small><p class="mt-2">@n.Message</p><a asp-action="Details" asp-route-id="@n.OrderId">View order →</a></article>}

@@ -1,0 +1,2 @@
+document.addEventListener('submit',event=>{const form=event.target;if(!form.checkValidity())return;const button=event.submitter;if(button){button.disabled=true;button.dataset.label=button.textContent;button.textContent='Working…';form.setAttribute('aria-busy','true');}});
+window.addEventListener('pageshow',()=>{document.querySelectorAll('button[data-label]').forEach(b=>{b.disabled=false;b.textContent=b.dataset.label;});});

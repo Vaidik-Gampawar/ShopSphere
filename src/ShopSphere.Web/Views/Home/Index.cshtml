@@ -1,0 +1,5 @@
+@model Page<ProductDto>
+@{ ViewData["Title"]="Everyday essentials"; }
+<section class="hero mb-5"><div class="hero-content"><div class="eyebrow mb-4">THE EVERYDAY COLLECTION / 2026</div><h1>Good things.<br/>For your everyday.</h1><p class="my-4">A considered collection for work, home, and everything in between. Find your next favorite.</p><a class="btn btn-dark btn-lg" asp-controller="Catalog" asp-action="Index">Explore the collection ↗</a><div class="mt-5 small">Thoughtfully selected &nbsp; • &nbsp; Made for daily life</div></div><div class="hero-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="art-caption">LESS NOISE.<br/>MORE POSSIBILITY.</div></div></section>
+<div class="d-flex align-items-end justify-content-between mb-4"><div><div class="eyebrow">CURATED FOR YOU</div><h2 class="mt-2">Everyday favorites</h2></div><a asp-controller="Catalog" asp-action="Index">View all products ↗</a></div>
+<div class="row g-4">@foreach(var p in Model.Items){<div class="col-md-4"><partial name="_ProductCard" model="p"/></div>}</div>

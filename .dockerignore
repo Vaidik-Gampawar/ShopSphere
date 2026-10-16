@@ -1,0 +1,24 @@
+# Keep local output, database files, credentials and unrelated artifacts out of the context.
+.git
+**/bin
+**/obj
+**/TestResults
+**/.vs
+**/.idea
+.local
+**/.env
+**/.env.*
+**/*.env
+**/secrets.json
+**/appsettings.*.local.json
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/*.pfx
+**/*.p12
+**/*.key
+**/*.user
+**/.DS_Store
+tests
+docs
+scripts
